@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER Anuyog Chauhan "anuyog.chauhan@aricent.com
 RUN apt-get update -y
-pip install --upgrade setuptools 
-pip install --upgrade pip
+RUN pip install --upgrade setuptools 
+RUN pip install --upgrade pip
 RUN apt-get install -y python-pip python-dev build-essential
 COPY . /app
 WORKDIR /app
