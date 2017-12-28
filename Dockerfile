@@ -4,6 +4,6 @@ RUN apt-get update -y
 RUN apt-get install -y python-pip python-dev build-essential
 COPY . /app
 WORKDIR /app
-RUN cat requirements.txt | while read PACKAGE; do pip install "$PACKAGE"; done
+RUN cat requirements.txt | while read PACKAGE; do pip install --proxy=http://proxy.example.com "$PACKAGE"; done
 ENTRYPOINT ["python"]
 CMD ["service-time.py"]
