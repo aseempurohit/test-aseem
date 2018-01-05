@@ -3,9 +3,6 @@ port:
     listening: true
     ip:
     - 0.0.0.0
-process:
-  nginx:
-    running: true
 http:
   http://localhost:
     status: 200
