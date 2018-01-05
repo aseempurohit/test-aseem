@@ -1,1 +1,11 @@
-
+port:
+  tcp:1002:
+    listening: true
+    ip:
+    - 0.0.0.0
+http:
+  http://localhost:
+    status: 200
+    timeout: 5000
+    body:
+    - Welcome to nginx! 
