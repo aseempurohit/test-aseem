@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Anuyog Chauhan "anuyog.chauhan@aricent.com
 RUN apt-get update -y
 RUN apt-get install -y python-pip python-dev build-essential
-RUN dd if=/dev/zero of=file.txt count=1024 bs=11534336
+RUN dd if=/dev/zero of=file.txt count=1024 bs=1024
 COPY . /app
 WORKDIR /app
 RUN pip install --upgrade pip
